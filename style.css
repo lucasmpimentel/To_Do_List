@@ -33,7 +33,7 @@ ol li:hover {
 } */
 
 .clicked {
-  background-color: rgb(128 , 128 , 128);
+  background-color: gray;
   color: white;
 }
 

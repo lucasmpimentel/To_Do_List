@@ -52,7 +52,7 @@ eraseAll.addEventListener('click', () => {
 const remove = document.querySelector('#remover-finalizados');
 remove.addEventListener('click', () => {
   const erase = document.querySelectorAll('.completed');
-  for (let i in erase) {
+  for (let i = 0; i < erase.length; i += 1) {
     erase[i].remove();
   }
 });
