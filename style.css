@@ -10,7 +10,7 @@ ol {
   padding: 0;
 }
 
-ol li {
+/* ol li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -19,21 +19,25 @@ ol li {
   font-size: 14pt;
   transition: 0.2s;
 }
+ */
 
+/*
 ol li:nth-child( odd ) {
   background-color: rgb(247 , 247 , 247);
 }
+ */
 
+/*
 ol li:hover {
   background-color: rgb(204 , 204 , 204);
-}
+} */
 
-ol li.clicked {
-  background-color: gray;
+.clicked {
+  background-color: rgb(128 , 128 , 128);
   color: white;
 }
 
-ol li.completed:before {
+/* ol li.completed:before {
   content: '';
   position: absolute;
   border-color: white;
@@ -44,7 +48,7 @@ ol li.completed:before {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
-}
+} */
 
 /* \\\\\\\\\\\\\\\\\\\\\\\ ID'S //////////////////////////// */
 #lista-tarefas {

@@ -39,3 +39,20 @@ function newTask() {
 }
 const taskGen = document.querySelector('#criar-tarefa');
 taskGen.addEventListener('click', newTask);
+
+// ------------------------- APAGA TUDO ---------------------------
+
+const eraseAll = document.querySelector('#apaga-tudo');
+eraseAll.addEventListener('click', () => {
+  list.innerHTML = '';
+});
+
+// ------------------------- APAGA COMPLETA ------------------
+
+const remove = document.querySelector('#remover-finalizados');
+remove.addEventListener('click', () => {
+  const erase = document.querySelectorAll('.completed');
+  for (let i in erase) {
+    erase[i].remove();
+  }
+});
