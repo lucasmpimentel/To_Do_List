@@ -1,24 +1,28 @@
-// -------------------------- Declarações e Get's ------------------------------
+// Código do início até a linha 40 foi baseado no código do w3School:
+// https://www.w3schools.com/howto/howto_js_todolist.asp
 
-const listContent = document.getElementsByTagName('li');
-
-// ------------------------- CLOSE BUTTON  NA LISTA ------------------------------------
-
-for (let i = 0; i < listContent.length; i += 1) {
-  const close = document.createElement('span');
-  const closeTxt = document.createTextNode('X');
-  close.className = 'close';
-  close.appendChild(closeTxt);
-  listContent[i].appendChild(close);
-}
-
-// -------------------------- CHECK NO INICIO DA LISTA -------------------------------------
+// ------------------------------ SELETOR DE TASK -------------------------------------
 const list = document.querySelector('ol');
 list.addEventListener('click', (ev) => {
-  if (ev.target.tagName === 'li') {
-    ev.target.classList.toggle('checked');
+  const select = document.querySelector('.clicked');
+  if (select === null) {
+    ev.target.classList.add('clicked');
+  } else {
+    select.classList.remove('clicked');
+    ev.target.classList.add('clicked');
   }
-}, false);
+});
+
+// ----------------------------- MARCA CONCLUIDA ---------------------------
+const listId = document.getElementById('lista-tarefas');
+listId.addEventListener('dblclick', (event) => {
+  const dClick = event.target;
+  if (dClick.classList.contains('completed')) {
+    dClick.classList.remove('completed');
+  } else {
+    dClick.classList.add('completed');
+  }
+});
 
 // ---------------------------- EVENTO BOTÃO ADICIONAR -------------------------------------
 function newTask() {
@@ -33,6 +37,5 @@ function newTask() {
   }
   document.getElementById('texto-tarefa').value = null;
 }
-
 const taskGen = document.querySelector('#criar-tarefa');
 taskGen.addEventListener('click', newTask);
