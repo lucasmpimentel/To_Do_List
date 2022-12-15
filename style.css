@@ -10,45 +10,24 @@ ol {
   padding: 0;
 }
 
-/* ol li {
+ol li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
-  background-color: rgb(238 , 238 , 238);
   border-radius: 5px;
   font-size: 14pt;
-  transition: 0.2s;
-}
- */
 
-/*
-ol li:nth-child( odd ) {
-  background-color: rgb(247 , 247 , 247);
+  /* transition: 0.2s; */
 }
- */
 
-/*
 ol li:hover {
-  background-color: rgb(204 , 204 , 204);
-} */
+  background-color: grey;
+}
 
 .clicked {
   background-color: gray;
   color: white;
 }
-
-/* ol li.completed:before {
-  content: '';
-  position: absolute;
-  border-color: white;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-} */
 
 /* \\\\\\\\\\\\\\\\\\\\\\\ ID'S //////////////////////////// */
 #lista-tarefas {
